@@ -1,0 +1,26 @@
+// pixels to rems
+
+$baseFontSize: 16px !default;
+
+/**
+ * $px can has unit or hasn't
+*/
+@function pxToRem($px) {
+
+  // $px hasn't unit ,then give it pixel unit
+  $px: if(unitless($px), $px * 1px, $px);
+
+  // $px's unit is em ,then change it to rem
+  $px: if(unit($px) == "em", $px / 1em * 1rem, $px);
+
+  $result: 0rem;
+
+  // if $px' unit is rem then return $px directly ,else change $px to rem
+  @if unit($px) == "rem" {
+    $result: $px;
+  }@else {
+    $result: $px / $baseFontSize * 1rem;
+  }
+
+  @return $result;
+}

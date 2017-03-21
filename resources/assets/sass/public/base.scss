@@ -1,0 +1,18 @@
+html, body{
+	height: 100%;
+	font-size: $baseFontSize;
+	overflow-x: hidden;
+}
+
+#{$comonElements} {
+	box-sizing: border-box;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+input[type=text] {
+  -webkit-appearance: none;
+}
+

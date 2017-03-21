@@ -1,0 +1,19 @@
+/**
+ * if $flag is true then use pxToRem else use original unit , and $flag's default value is true.
+*/
+@mixin marginAuto($topBottom:0,$flag:true) {
+
+  @if length($topBottom) == 1 {
+
+    $topBottom: if($flag, pxToRem($topBottom), $topBottom);
+
+    margin: $topBottom auto;
+
+  } @else if length($topBottom) == 2 {
+
+    $topBottom: if($flag, pxToRem(nth($topBottom, 1)) pxToRem(nth($topBottom, 2)), $topBottom);
+
+    margin: nth($topBottom, 1) auto nth($topBottom, 2);
+
+  }
+}

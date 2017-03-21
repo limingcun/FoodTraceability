@@ -1,0 +1,12 @@
+// put all the "%" here
+
+%marginLR {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%wrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
