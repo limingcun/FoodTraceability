@@ -107,5 +107,19 @@ export default {
                 return (env.is_server?env.app_ano_url:'') + '/' + url;
             }
         };
+
+        /**
+         * 根据key获取对象中的value
+         * @param object
+         * @param string
+         * @returns {object.key}
+         */
+        Vue.prototype.$pickObjectValue = (object, key) => {
+            for (let i in object) {
+                if(key == i) {
+                    return object[i];
+                }
+            }
+        };
     }
 };

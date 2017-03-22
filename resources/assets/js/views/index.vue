@@ -3,74 +3,52 @@
  * 最顶层组件
  * @description 最顶层的组件，但不包含登录、404页面这些组件
 
- * @author 何翠香
+ * @author 
  * @date 2017/02/22
  * 
  */
 <template>
-
-    <div id="main">
-		<my-header></my-header>
-    	<!-- 侧边栏 -->
-		<slider-bar
-            :show="show"
-            :navbars="navbars"
-            @hide="show = !show"
-        >
-        </slider-bar>
-        
-        <router-view></router-view>
-
-    </div>
+  <div id="main">
+    <BHeader></BHeader>
+    <Left></Left>
+    <router-view></router-view>
+  </div>
 </template>
-
-<style lang="sass" scoped>
-    @import "../../sass/function";
-
-    #main {
-    	width: 100%;
-        background:#eef3f7;
-        
-        position:relative;
-        #ff{
-            height:200px;
-            background:red
-        }
-        
-        
-    }
-  
-</style>
 
 <script>
 
-	
-	import {mapState} from 'vuex';
-    import {mapMutations} from 'vuex';
-    import MyHeader from '../components/public/header.vue';
-    import SliderBar from '../components/public/slider-bar.vue';
-    import set from '../components/basic/set.vue';
+    import BHeader from 'components/layout/header.vue';
+    import Left from 'components/layout/left.vue';
+    
     export default{
-        name:'Index',
-		data () {
-            return {
-                
-                
-            }
-        },
-        components: {
-            MyHeader,
-            SliderBar,
-            
-        },
-        methods: {
-           
-
-            
-            
-           
-        }
-        
+      name:'index',
+      components: {
+        BHeader,
+        Left
+      },
+    //   watch: {
+    //     '$route' (to, from) {
+    //       // 对路由变化作出响应...
+    //       this.currentRoute = to
+    //     }
+    //   },
+		  // data () {
+    //     return {
+    //       currentRoute: {},
+    //     }
+    //   },
+    //   methods: {}
     }
 
 </script>
+
+<style lang="sass">
+  
+  @import '../../sass/elementTableReset.scss';
+
+  #main {
+    width: 100%;
+    height: 100%;
+  }
+
+</style>

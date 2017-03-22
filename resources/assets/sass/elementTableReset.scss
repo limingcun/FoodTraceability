@@ -1,0 +1,195 @@
+/* 重置elementui表格的样式，以及表格下的其他的效果和操作的样式*/
+.tablelist{
+  width: 100%;
+  height: calc(100% - 242px);
+  .el-table{
+    border-color: #0098DC;
+    background-color: transparent;
+    tr {
+      background-color: transparent;
+    }
+    td, th {
+      border-right: 1px solid #0098DC;
+    }
+    td, th.is-leaf {
+      border-bottom: 1px solid #0098DC;
+    }
+    .el-table__header-wrapper, .el-table__fixed-header-wrapper {
+      thead {
+        div {
+          color: #fff;
+          background-color: #2D5E7E;
+        }
+        tr {
+          border-color: #0098DC;
+          background-color: #2D5E7E;
+          th {
+            border-color: #0098DC;
+            background-color: #2D5E7E;
+          }
+        }
+      }
+    }
+    .el-table__body-wrapper{
+      tbody {
+        div {
+          color: #fff;
+          background-color: transparent;
+        }
+        tr {
+          border-color: #0098DC;
+          background-color: transparent;
+          td {
+            border-color: #0098DC;
+            background-color: transparent;
+          }
+        }
+        tr:hover>td{
+          background-color: #2D5E7E;
+        }
+      }
+    }
+    .sort-caret.ascending{
+      border-bottom: 5px solid #01FFFF;
+    }
+    .sort-caret.descending {
+      border-top: 5px solid #01FFFF;
+    }
+    .ascending {
+      .sort-caret.ascending {
+        border-bottom-color: #5BC2E1;
+      }
+    }
+    .descending {
+      .sort-caret.descending {
+        border-top-color: #5BC2E1;
+      }
+    }
+  }
+  .el-table::after, .el-table::before {
+    background-color: #0098DC;
+  }
+}
+
+/*
+
+  描述省略
+
+
+ */
+.miaosu {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  padding-left: 5%;
+}  
+/*
+
+  状态开关
+
+
+ */
+.on-off{
+  position: relative;
+  width: 96px;
+  height: 36px;
+  margin: 0 auto;
+  input {
+    visibility: hidden;
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 96px;
+    height: 32px;
+    border: 1px solid #13CE67;
+    border-radius: 16px;
+    cursor: pointer;
+    .ball {
+      display: block;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      transition: all .5s ease;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 4px;
+      z-index: 1;
+      margin-top: -14px;
+      background: #13CE67;
+    }
+  }
+  label::before {
+    content: 'On';
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    margin-top: -9px;
+    color: #fff;
+    font-size: 12px;
+  }
+  label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    margin-top: -9px;
+  }
+  input[type=checkbox]:checked + label {
+    border-color: #2EC0E9;
+  }
+  input[type=checkbox]:checked + label .ball {
+    background: #2EC0E9;
+    left: 64px;
+  }
+}
+
+/*
+
+  操作按钮
+
+
+ */
+/*@media srceen and (max-width:1366px) {
+  .table-opt-item {
+    width: 68px;
+  }
+}*/
+.table-opt-item {
+  float: left;
+  width: 98px;
+  line-height: 48px;
+  cursor: pointer;
+  .icon {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    vertical-align: middle;
+  }
+  .icon-power {
+    background-image: url(/images/opt_power.png);
+  }
+  .icon-password {
+    background-image: url(/images/opt_password.png);
+  }
+  .icon-edit {
+    background-image: url(/images/opt_edit.png);
+  }
+  .icon-del {
+    background-image: url(/images/opt_del.png);
+  }
+}
+
+      

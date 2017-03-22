@@ -3,6 +3,10 @@
  */
 export 
 { 
-	Button 
+	Button,
+    Form,
+    Checkbox,
+    Input,
+    Switch
 } 
 from 'element-ui'

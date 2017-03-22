@@ -22,6 +22,7 @@ import VeeValidate from 'vee-validate';
 import messagesZhCN from 'lang/validate/zh_CN.js';
 import messagesEn from 'lang/validate/en.js';
 Vue.use(VeeValidate, {
+    fieldsBagName: 'vfields',
     locale: require('projectRoot/env.js').app_lang,
     dictionary: {
         'zh-CN': {
@@ -38,6 +39,7 @@ import enLocale from 'element-ui/lib/locale/lang/en'
 import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
 import locale from 'element-ui/lib/locale'
 import 'element-ui/lib/theme-default/index.css'
+// import 'projectRoot/theme/index.css'
 // 设置语言
 switch (require('projectRoot/env.js').app_lang) {
 	case 'zh-CN':
@@ -54,6 +56,8 @@ Object.keys(elementComponent).forEach(function (component) {
   Vue.use(elementComponent[component])
 })
 
+// import ElementUI from 'element-ui'
+// Vue.use(ElementUI)
 
 // vue-i18n初始化
 import VueI18n from 'vue-i18n'

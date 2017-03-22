@@ -33,21 +33,63 @@ const set = resolve => {
     }, 'set');
 }
 
-//---------------------------详细页面----------------------------------
-const detail = resolve => {
-    require.ensure(['../views/detail.vue'], () =>{
-        resolve(require('../views/detail.vue'));
-    }, 'detail');
+
+
+
+
+
+//---------------------------传感器----------------------------------
+const sensor = resolve => {
+    require.ensure(['../views/sensor/sensor.vue'], () =>{
+        resolve(require('../views/sensor/sensor.vue'));
+    }, 'sensor');
 }
 
-//---------------------------数据显示----------------------------------
-const chart = resolve => {
-    require.ensure(['../components/basic/chart.vue'], () =>{
-        resolve(require('../components/basic/chart.vue'));
-    }, 'chart');
+//---------------------------传感器类型----------------------------------
+const sensorType = resolve => {
+    require.ensure(['../views/sensor/sensorType.vue'], () =>{
+        resolve(require('../views/sensor/sensorType.vue'));
+    }, 'sensorType');
+}
+
+//---------------------------传感器设置----------------------------------
+const sensorSet = resolve => {
+    require.ensure(['../views/sensor/sensorSet.vue'], () =>{
+        resolve(require('../views/sensor/sensorSet.vue'));
+    }, 'sensorSet');
 }
 
 
+
+
+
+//---------------------------公司管理----------------------------------
+const company = resolve => {
+    require.ensure(['../views/company/company.vue'], () =>{
+        resolve(require('../views/company/company.vue'));
+    }, 'company');
+}
+
+//---------------------------公司基本管理----------------------------------
+const companyInfo = resolve => {
+    require.ensure(['../views/company/companyInfo.vue'], () =>{
+        resolve(require('../views/company/companyInfo.vue'));
+    }, 'companyInfo');
+}
+
+//---------------------------用户管理----------------------------------
+const companyUser = resolve => {
+    require.ensure(['../views/company/companyUser.vue'], () =>{
+        resolve(require('../views/company/companyUser.vue'));
+    }, 'companyUser');
+}
+
+//---------------------------日志管理----------------------------------
+const companyLog = resolve => {
+    require.ensure(['../views/company/companyLog.vue'], () =>{
+        resolve(require('../views/company/companyLog.vue'));
+    }, 'companyLog');
+}
 
 const routes = [
     
@@ -55,19 +97,6 @@ const routes = [
         path: '/',
         name: 'index',
         component: index,
-        children: [
-            {
-                path: '',
-                name: 'chart',
-                component: chart
-            },
-            {
-                path: 'set',
-                name: 'set',
-                component: set
-            },
-            
-        ]
     },        
     {
         path: '/login',
@@ -80,11 +109,7 @@ const routes = [
         name: 'notFound',
         component: notFound
     }
-    ,{
-        path:'/detail',
-        name:'detail',
-        component:detail
-    }
+    
 ];
 
 export default new Router({

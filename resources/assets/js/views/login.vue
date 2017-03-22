@@ -1,9 +1,9 @@
 /**
  * 
  * 登录组件
- * @description 
- * @author 苏锐佳
- * @date 2017/02/22
+ * @description 访问登录的路由都会定向到这个组件页面
+ * @author 李明村
+ * @date 2017/03/22
  * 
  */
 <template>
@@ -17,8 +17,7 @@
 
 </style>
 <script>
-
     export default{
-        name: 'Login'
+        name: 'login'
     }
 </script>
