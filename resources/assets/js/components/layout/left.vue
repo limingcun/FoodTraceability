@@ -8,7 +8,7 @@
  */
 <template>
   <div class="left">
-    left
+    <router-link to="test">Go to Cest</router-link>
   </div>
 </template>
 
@@ -21,7 +21,7 @@
 <style lang="sass" scoped>
   .left {
     width:200px;
-    height:100%;
+    height:92%;
     background-color: #293038;
   }
 </style>

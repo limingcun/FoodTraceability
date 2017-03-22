@@ -8,7 +8,7 @@
  */
 <template>
     <div>
-        40455
+        404
     </div>
 </template>
 <style lang="sass" scoped>

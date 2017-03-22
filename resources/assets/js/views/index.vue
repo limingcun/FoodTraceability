@@ -20,24 +20,12 @@
     import BHeader from 'components/layout/header.vue';
     import Left from 'components/layout/left.vue';
     
-    export default{
+    export default {
       name:'index',
       components: {
         BHeader,
         Left
-      },
-    //   watch: {
-    //     '$route' (to, from) {
-    //       // 对路由变化作出响应...
-    //       this.currentRoute = to
-    //     }
-    //   },
-		  // data () {
-    //     return {
-    //       currentRoute: {},
-    //     }
-    //   },
-    //   methods: {}
+      }
     }
 
 </script>
