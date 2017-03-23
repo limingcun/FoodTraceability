@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => '生之园智慧农业大数据平台',
+    'name' => 'Laravel',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,8 +64,7 @@ return [
     |
     */
 
-    //'timezone' => 'UTC',
-    'timezone' => 'Asia/Shanghai',
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,8 +77,7 @@ return [
     |
     */
 
-    //'locale' => 'en',
-    'locale' => 'zh-CN',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -169,7 +167,6 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
-        Laravel\Passport\PassportServiceProvider::class, //API 认证
 
         /*
          * Application Service Providers...
@@ -179,11 +176,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
-        /*
-         * Mannal Service Providers
-         */
-        App\Providers\IQueryServiceProvider::class, //注册iquery
 
     ],
 
@@ -233,9 +225,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
-        //mannal facecade
-        'Page' => App\Facades\IPageClass::class, //分页生成器的门面的别名
 
     ],
 
